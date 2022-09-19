@@ -20,7 +20,7 @@ inherit update-rc.d
 INITSCRIPT_NAME = "boot-flags"
 INITSCRIPT_PARAMS = "start 99 5 ."
 
-do_install_append () {
+do_install:append () {
     install -d ${D}${sysconfdir}/init.d
     install -m 0755 init ${D}${sysconfdir}/init.d/boot-flags
 
@@ -34,6 +34,6 @@ do_install_append () {
     install -m 0755 sysupgrade ${D}${bindir}
 }
 
-FILES_${PN} = "${sysconfdir} ${bindir}"
+FILES:${PN} = "${sysconfdir} ${bindir}"
 
-RDEPENDS_${PN} = "coreutils dosfstools e2fsprogs-mke2fs util-linux" 
+RDEPENDS:${PN} = "coreutils dosfstools e2fsprogs-mke2fs util-linux" 

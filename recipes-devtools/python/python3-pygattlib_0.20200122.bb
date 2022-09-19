@@ -16,7 +16,7 @@ SRC_URI[sha256sum] = "e7bc9f073cd32d9259cfb7e5b12c76f45e29316259d1d9a7872333bc63
 
 S = "${WORKDIR}/gattlib-${PV}"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     bluez5 \
     ${PYTHON_PN}-fcntl \
 "

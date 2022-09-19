@@ -15,7 +15,7 @@ SRC_URI[sha256sum] = "7f4e0ec72f03533a3ef5fdd532f08d30ab7149213495e531d0f6580e9f
 
 S = "${WORKDIR}/pygatt-${PV}"
 
-RDEPENDS_${PN} += "\
+RDEPENDS:${PN} += "\
     bluez5 \
     ${PYTHON_PN}-pyserial \
 "

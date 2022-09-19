@@ -26,7 +26,7 @@ KERNEL_DEVICETREE ?= " \
 LINUX_VERSION = "5.6"
 LINUX_VERSION_EXTENSION = "-jumpnow"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/linux-stable-${LINUX_VERSION}:${THISDIR}/linux-stable-${LINUX_VERSION}/dts:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-stable-${LINUX_VERSION}:${THISDIR}/linux-stable-${LINUX_VERSION}/dts:"
 
 S = "${WORKDIR}/git"
 
@@ -61,7 +61,7 @@ SRC_URI = " \
     file://bbb-bcc-s6.dts \
 "
 
-do_configure_prepend () {
+do_configure:prepend () {
     cp ${WORKDIR}/*.dtsi ${S}/arch/arm/boot/dts
     cp ${WORKDIR}/*.dts ${S}/arch/arm/boot/dts
 }

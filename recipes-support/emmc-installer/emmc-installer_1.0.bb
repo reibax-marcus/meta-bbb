@@ -18,7 +18,7 @@ PR = "r4"
 
 S = "${WORKDIR}"
 
-do_install_append () {
+do_install:append () {
     install -d ${D}${sysconfdir}/init.d
     install -m 0755 init ${D}${sysconfdir}/init.d/emmc-installer
 
@@ -35,6 +35,6 @@ do_install_append () {
     install -m 0755 cylon.sh ${D}${bindir}
 }
 
-FILES_${PN} = "${sysconfdir} ${bindir}"
+FILES:${PN} = "${sysconfdir} ${bindir}"
 
-RDEPENDS_${PN} = "coreutils dosfstools e2fsprogs-mke2fs util-linux" 
+RDEPENDS:${PN} = "coreutils dosfstools e2fsprogs-mke2fs util-linux" 

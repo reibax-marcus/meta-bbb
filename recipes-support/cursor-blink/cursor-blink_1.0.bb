@@ -17,5 +17,5 @@ do_install() {
     install -m 0755 cursor-off ${D}${bindir}
 }
 
-FILES_${PN} = "${bindir}"
+FILES:${PN} = "${bindir}"
 

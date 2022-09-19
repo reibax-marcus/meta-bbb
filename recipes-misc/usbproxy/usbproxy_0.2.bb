@@ -12,4 +12,4 @@ DEPENDS = "libpcap libusb1"
 
 S = "${WORKDIR}/git/src"
 
-FILES_${PN} = "${bindir} ${libdir}"
+FILES:${PN} = "${bindir} ${libdir}"

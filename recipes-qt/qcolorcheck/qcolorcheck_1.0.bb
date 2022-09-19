@@ -17,7 +17,7 @@ do_install() {
     install -m 0755 ${B}/qcolorcheck ${D}${bindir}
 }
 
-FILES_${PN} = "${bindir}"
+FILES:${PN} = "${bindir}"
 
-RDEPENDS_${PN} = "qtbase-plugins"
+RDEPENDS:${PN} = "qtbase-plugins"
 

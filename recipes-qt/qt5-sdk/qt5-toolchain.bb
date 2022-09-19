@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
 
 inherit populate_sdk
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     packagegroup-core-standalone-sdk-target \
     libsqlite3-dev \
     qtbase-dev \
