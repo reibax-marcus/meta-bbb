@@ -1,0 +1,26 @@
+From 6649805332467fcd1f5c40439e5d0e54773bac99 Mon Sep 17 00:00:00 2001
+From: Xabier Marquiegui <xmarquiegui@ainguraiiot.com>
+Date: Wed, 28 Sep 2022 09:25:14 +0200
+Subject: [PATCH] fix: beaglebone black pps not working
+
+---
+ arch/arm/boot/dts/am335x-boneblack-pps.dts | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack-pps.dts b/arch/arm/boot/dts/am335x-boneblack-pps.dts
+index fd8e5edd1ee0..1bddace35631 100644
+--- a/arch/arm/boot/dts/am335x-boneblack-pps.dts
++++ b/arch/arm/boot/dts/am335x-boneblack-pps.dts
+@@ -15,6 +15,9 @@ AM33XX_PADCONF(AM335X_PIN_GPMC_OEN_REN, PIN_OUTPUT_PULLDOWN,  MUX_MODE2)
+ 
+ /{
+ 	pwm7: dmtimer-pwm7 {
++		pinctrl-names = "default";
++		pinctrl-0 = <&pwm7_pins>;
++
+ 		compatible = "ti,omap-dmtimer-pwm";
+ 		#pwm-cells = <3>;
+ 		ti,timers = <&timer7>;
+-- 
+2.34.1
+
