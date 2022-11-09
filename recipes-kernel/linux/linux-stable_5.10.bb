@@ -25,8 +25,8 @@ S = "${WORKDIR}/git"
 
 PATCHTOOL = "git"
 
-PV = "5.10.131"
-SRCREV = "f2a0073c4a8674af46fd6a7cf563cf55dfe926f1"
+PV = "5.10.145"
+SRCREV = "56860e0f5e7f2b2492cd55588030d9f356988b5b"
 SRC_URI = " \
     git://github.com/beagleboard/linux.git;protocol=https;branch=${LINUX_VERSION} \
     file://0001-fix-beaglebone-black-pps-not-working.patch \
